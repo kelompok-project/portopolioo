@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ovan Priatn</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia, serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+color:#fff;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:#000;
+border-bottom:2px solid gold;
+}
+
+nav h1{
+font-size:28px;
+color:gold;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+nav ul li a:hover{
+color:gold;
+}
+
+/* SECTION */
+
+.section{
+padding:80px 120px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+border-top:2px solid gold;
+}
+
+.section-text{
+flex:1;
+}
+
+.section-text h2{
+font-size:55px;
+margin-bottom:20px;
+color:gold;
+}
+
+.section-text p{
+line-height:1.8;
+color:#ddd;
+margin-bottom:10px;
+}
+
+.section-img{
+flex:1;
+text-align:center;
+}
+
+.section-img img{
+width:280px;
+border:6px solid gold;
+padding:10px;
+background:#111;
+}
+
+/* INTRO */
+
+.intro{
+padding:80px 120px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+}
+
+.intro-text{
+flex:1;
+}
+
+.intro-text h2{
+font-size:60px;
+margin-bottom:10px;
+color:gold;
+}
+
+.decor{
+width:200px;
+height:2px;
+background:gold;
+margin-bottom:25px;
+}
+
+.intro-text p{
+line-height:1.8;
+margin-bottom:15px;
+color:#ddd;
+}
+
+.intro-img{
+flex:1;
+text-align:center;
+}
+
+.intro-img img{
+width:280px;
+border:6px solid gold;
+padding:10px;
+background:#111;
+}
+
+/* COMPANY PROFILE */
+
+.company-profile{
+padding:80px 120px;
+border-top:2px solid gold;
+}
+
+.profile-box{
+background:#000;
+border:3px solid gold;
+padding:50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:60px;
+}
+
+.profile-left{
+flex:1;
+}
+
+.profile-left h2{
+color:gold;
+margin-bottom:15px;
+}
+
+.profile-left p{
+line-height:1.8;
+color:#ddd;
+margin-bottom:30px;
+}
+
+.number{
+background:gold;
+color:#000;
+width:45px;
+height:45px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.holding{
+font-size:22px;
+line-height:1.8;
+color:#fff;
+}
+
+.profile-right{
+flex:1;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+text-align:center;
+}
+
+.profile-right img{
+width:120px;
+border:3px solid gold;
+padding:10px;
+background:#111;
+}
+
+/* ORGANIZATION */
+
+.organization{
+padding:80px 120px;
+border-top:2px solid gold;
+text-align:center;
+}
+
+.org-title{
+font-size:55px;
+color:gold;
+margin-bottom:60px;
+}
+
+.org-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:50px;
+}
+
+.org-card{
+border:3px solid gold;
+padding:40px;
+background:#000;
+}
+
+.org-card img{
+width:130px;
+margin-bottom:20px;
+}
+
+.org-card h3{
+color:gold;
+margin-bottom:10px;
+font-size:24px;
+}
+
+.org-card p{
+color:#ddd;
+line-height:1.6;
+}
+
+/* TEAM PRO */
+
+.team-pro{
+padding:80px 120px;
+border-top:2px solid gold;
+text-align:center;
+background:#000;
+}
+
+.team-title{
+background:#111;
+color:gold;
+display:inline-block;
+padding:15px 60px;
+border-radius:50px;
+font-size:30px;
+margin-bottom:50px;
+border:2px solid gold;
+}
+
+/* 3 ORANG PER BARIS */
+.team-row{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+/* CARD HORIZONTAL */
+.team-card{
+display:flex;
+align-items:center;
+gap:15px;
+width:300px;
+background:#0a0a0a;
+border:2px solid gold;
+padding:15px;
+transition:0.3s;
+border-radius:10px;
+}
+
+.team-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 15px gold;
+}
+
+/* FOTO */
+.team-card img{
+width:80px;
+height:80px;
+object-fit:cover;
+border:3px solid gold;
+padding:4px;
+border-radius:8px;
+}
+
+/* TEXT */
+.team-info{
+text-align:left;
+}
+
+.team-info h3{
+color:gold;
+font-size:14px;
+margin-bottom:5px;
+}
+
+.team-info p{
+color:#ccc;
+font-size:12px;
+line-height:1.4;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.team-row{
+flex-direction:column;
+align-items:center;
+}
+}
+
+/* VISION MISSION */
+.vision-mission {
+    padding: 80px 120px;
+    border-top: 2px solid gold;
+    text-align: center;
+}
+
+.vm-box {
+    max-width: 900px;
+    margin: auto;
+}
+
+.vm-title {
+    background: gold;
+    color: #000;
+    padding: 15px 40px;
+    font-size: 30px;
+    border-radius: 40px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.vm-text {
+    color: #ddd;
+    text-align: justify;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.mission-list {
+    text-align: left;
+    max-width: 900px;
+    margin: auto;
+    color: #ddd;
+}
+
+.mission-list p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* ================= FILOSOFI ================= */
+.filosofi {
+  padding: 80px 20px; /* lebih aman untuk layar kecil */
+  border-top: 2px solid gold;
+  text-align: center;
+}
+
+.filosofi p {
+  max-width: 800px;
+  margin: 20px auto 0;
+  color: #ddd;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* ================= PROGRAM ================= */
+.program {
+  padding: 80px 20px;
+  border-top: 2px solid gold;
+  text-align: center;
+}
+
+/* Judul */
+.program-title {
+  background: gold;
+  color: #000;
+  padding: 12px 40px;
+  border-radius: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+/* Grid */
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Card */
+.program-card {
+  border: 2px solid gold;
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+/* Hover biar lebih hidup */
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px gold;
+}
+
+/* Nomor */
+.program-number {
+  background: gold;
+  color: #000;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 15px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .program-grid {
+    grid-template-columns: 1fr; /* jadi 1 kolom di HP */
+  }
+
+  .program-title {
+    font-size: 22px;
+    padding: 10px 25px;
+  }
+}
+
+
+
+/* PROGRAM STYLE IMPROVEMENT */
+
+/* ============================= */
+/* PROGRAM STYLE (MODEL FOTO) */
+/* ============================= */
+
+.program-sector{
+padding:80px 120px;
+border-top:2px solid gold;
+text-align:center;
+}
+
+/* JUDUL */
+.sector-title{
+background:gold;
+color:#000;
+display:inline-block;
+padding:20px 60px;
+border-radius:50px;
+font-size:30px;
+font-weight:bold;
+margin-bottom:60px;
+}
+
+/* LAYOUT KIRI GARIS KANAN */
+.sector-line{
+display:grid;
+grid-template-columns:1fr auto 1fr;
+align-items:center;
+gap:40px;
+max-width:1000px;
+margin:auto;
+}
+
+/* GARIS TITIK */
+.line-dot{
+border-top:3px dotted gold;
+width:220px;
+}
+
+/* ITEM */
+.sector-item{
+text-align:center;
+}
+
+.sector-number{
+background:gold;
+color:#000;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+margin:auto;
+margin-bottom:15px;
+font-size:18px;
+}
+
+/* TEXT */
+.sector-item p{
+color:#ddd;
+line-height:1.8;
+font-size:16px;
+max-width:360px;
+margin:auto;
+}
+
+/* RESPONSIVE HP */
+@media(max-width:768px){
+
+.program-sector{
+padding:60px 25px;
+}
+
+.sector-line{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.line-dot{
+display:none;
+}
+
+}
+
+/* QUOTE SIMPLE */
+
+.quote{
+border-top:2px solid gold;
+padding:40px 20px;
+text-align:center;
+}
+
+.quote p{
+max-width:700px;
+margin:auto;
+font-size:16px;
+line-height:1.8;
+color:#ddd;
+font-style:italic;
+}
+
+.quote span{
+display:block;
+margin-top:15px;
+color:gold;
+font-weight:bold;
+font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h1>Ovan Priatn</h1>
+
+<ul>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#bio">Biografi</a></li>
+<li><a href="#work">Work</a></li>
+<li><a href="#achievement">Achievement</a></li>
+</ul>
+
+</nav>
+
+
+<!-- INTRODUCTION -->
+
+<section class="intro" id="intro">
+
+<div class="intro-text">
+
+<h2>INTRODUCTION</h2>
+
+<div class="decor"></div>
+
+<p>
+Halo, nama saya Ovan Priatna. Profesi saya adalah wiraswasta yang bergerak di bidang
+arsitektur, kontruksi, Interior, IT, event organizer. Panggilan akrab saya adalah Colonel
+blue atau Ali..
+</p>
+
+<p>
+Saya adalah salah satu putra lingga jaya, oleh
+karena itu saya berniat untuk maju sebagai calon
+kepala Desa Linggajaya dengan tujuan membawa
+Perubahan, meningkatkan kesejahteraan, dll
+yang akan dijelaskan dalam program kerja saya.
+Maka dari itu dengan segenap rasa hormat saya
+sampaikan biografi saya melalui pitch deck ini.
+</p>
+
+</div>
+
+<div class="intro-img">
+<img src="foto.jpg.jpeg">
+</div>
+
+</section>
+
+
+
+<!-- BIOGRAFI -->
+
+<section class="section" id="bio">
+
+<div class="section-text">
+
+<h2>BIOGRAFI</h2>
+
+<p>Nama Lengkap : Ovan Priatn</p>
+<p>Tempat Tanggal Lahir : Sumedang, 06 Mei 2000</p>
+<p>Alamat : Dsn. Cipari RT 001 RW 003 Linggajaya</p>
+<p>Agama : Islam</p>
+<p>Kewarganegaraan : Warga Negara Indonesia</p>
+<p>Instagram : @ovanpriatn_</p>
+<p>Email : ovanpriatn@gmail.com</p>
+<p>Website : www.elioncorp.co.id</p>
+<p>Hobi : Gamers & Badminton</p>
+<p>Bidang Keahlian : Arsitektur</p>
+<p>Status : Lajang</p>
+
+</div>
+
+<div class="section-img">
+<img src="foto1.jpg.jpeg">
+</div>
+
+</section>
+
+
+
+<!-- WORK EXPERIENCE -->
+
+<section class="section" id="work">
+
+<div class="section-text">
+
+<h2>WORK EXPERIENCE</h2>
+
+<p><b>PT. Cahaya Sedayu Gemilang</b><br>
+Salah satu anak perusahaan dari
+Agung Sedayu Group. Sebagai
+Pengawas Pelaksanaan
+Pembangunan PIK 2 Pulau D.</p>
+
+<p><b>PT. Inti Persada Nusantara</b><br>
+Perusahaan yang bergerak di
+bidang MEP kontraktor, sebagai
+drafter.</p>
+
+<p><b>PT. Reka Cipta Arta</b><br>
+Perusahaan yang bergerak di
+bidang konsultan arsitektur,
+sebagai Tenaga Ahli Arsitektur.</p>
+
+<p><b>CV. Wijaya Manunggal</b><br>
+Salah satu perusahaan yang
+bergerak di bidang konstruksi dan
+travel, Sebagai Tenaga Ahli
+Arsitektur & Kontruksi.</p>
+
+<p><b>CV. Pelita Agung Mandiri</b><br>
+Perusahaan yang bergerak di
+bidang kontraktor, Sebagai General
+Manager.</p>
+
+<p><b>CV. Manis Sukses Bersama</b><br>
+Perusahaan yang bergerak di
+bidang kontraktor dan developer
+perumahan, sebagai Direktur
+Teknik.</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ACHIEVEMENT -->
+
+<section class="section" id="achievement">
+
+<div class="section-text">
+
+<h2>ACHIEVEMENT</h2>
+
+<p>Pencapaian yang telah saya raih adalah mampu bekerja di lebih dari satu perusahaan secara bersamaan tanpa mengalami bentrok waktu dalam penyelesaian tugas. Selain itu, saya juga berhasil menjadi Komisaris Utama di perusahaan yang saya dirikan bersama tim direksi, yang akan terus saya kembangkan dengan tujuan memberikan manfaat bagi banyak orang serta membuka lapangan kerja seluas-luasnya.</p>
+
+</div>
+
+<div class="section-img">
+<img src="foto2.jpg.jpeg">
+</div>
+
+</section>
+
+
+
+<!-- COMPANY PROFILE -->
+
+<section class="company-profile">
+
+<div class="profile-box">
+
+<div class="profile-left">
+
+<div class="number">01</div>
+<h2>PT. ELION HANAYA ABYUDAYA</h2>
+
+<p>
+adalah perusahaan yang saya dirikan Dan bergerak di bidang
+arsitektur, kontruksi, interior, IT, Pengadaan, perdagangan
+umum, dan event organizer serta esport dan olahraga, yang
+dikelola oleh masing masing Holding Company.
+</p>
+
+<div class="number">02</div>
+<h2>HOLDING COMPANY</h2>
+
+<div class="holding">
+ESCARCH Studio<br>
+ELITe<br>
+Game House Elion That Bow
+</div>
+
+</div>
+
+<div class="profile-right">
+
+<img src="foto3.jpg.jpeg">
+<img src="foto4.jpg.jpeg">
+<img src="foto5.jpg.jpeg">
+<img src="foto7.jpg.jpeg">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ORGANIZATION -->
+
+<section class="organization">
+
+<h2 class="org-title">ORGANIZATION</h2>
+
+<div class="org-grid">
+
+<div class="org-card">
+<img src="foto8.jpg.jpeg">
+<h3>Karang Taruna</h3>
+<p>Ketua Umum Karang Taruna Desa Ganeas<br> KTCKA, Periode 2016 - 2022</p>
+</div>
+
+<div class="org-card">
+<img src="foto9.jpg.jpeg">
+<h3>IRMA Al Munawar</h3>
+<p>Ketua Umum Ikatan Remaja Masjid Masjid
+   <br> Al Munawar Desa Ganeas<br>Periode 2014 - 2020</p>
+</div>
+
+<div class="org-card">
+<img src="foto10.jpg.jpeg">
+<h3>PBESI Kab. Sumedang</h3>
+<p>Sekretaris Jenderal <br>PB ESI Peng Cab E-Sport Sumedang</p>
+</div>
+
+<div class="org-card">
+<img src="foto11.jpg.jpeg">
+<h3>Arya Catur Wisala</h3>
+<p>Dewan Penasehat</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TEAM PRO 1 -->
+<section class="team-pro">
+
+<h2 class="team-title">TEAM PRO</h2>
+
+<div class="team-row">
+
+<div class="team-card">
+<img src="ariq.jpeg">
+<div class="team-info">
+<h3>M. Ariq Almahdi</h3>
+<p>Sekpri Bidang hubungan sosial dan umum
+bertugas membantu konektivitas antara saya,
+client, partner maupun masyarakat.</p>
+</div>
+</div>
+
+<div class="team-card">
+<img src="diaz.jpeg">
+<div class="team-info">
+<h3>Djaz K.A</h3>
+<p>Direktur Muda Bidang Arsitektur, bertugas
+membantu perencanaan pembangunan
+infrastruktur dan fasilitas umum Desa.</p>
+</div>
+</div>
+
+<div class="team-card">
+<img src="sani.jpeg">
+<div class="team-info">
+<h3>M. Shofwan A</h3>
+<p>Manajer Muda ESCARCH , bertugas membantu
+mengatur schedule dan jadwal setelah jam
+Dinas, serta mengurus media Sosial saya pribadi.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- TEAM PRO 2 -->
+<section class="team-pro">
+
+<h2 class="team-title">TEAM PRO</h2>
+
+<div class="team-row">
+
+<div class="team-card">
+<img src="dinu.jpeg">
+<div class="team-info">
+<h3>Dinu A.P</h3>
+<p>Bendahara Pribadi, bertugas membantu
+mengatur cash flow pribadi dan perusahaan,
+serta membantu mengatur cash CSR untuk
+perbantuan proker Kepala Desa.</p>
+</div>
+</div>
+
+<div class="team-card">
+<img src="insa.jpeg">
+<div class="team-info">
+<h3>Insa I.R</h3>
+<p>Kadiv Elite, bertugas membantu di bidang
+Teknologi Informasi, membantu membuat,
+memelihara dan mengembangkan website dan
+aplikasi pelayanan Publik.</p>
+</div>
+</div>
+
+<div class="team-card">
+<img src="kosong.jpeg">
+<div class="team-info">
+<h3>Oki N</h3>
+<p>Kadiv Marketing , bertugas membantu
+perencanaan schedule campaign tanpa politik
+uang. Mengatur segala bentuk campaign baik
+offline maupun online.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- TEAM PRO 3 -->
+<section class="team-pro">
+
+<h2 class="team-title">TEAM PRO</h2>
+
+<div class="team-row">
+
+<div class="team-card">
+<img src="syauqi.jpeg">
+<div class="team-info">
+<h3>Syauqi F.R</h3>
+<p>Team Pro EHA Corp, bertugas membantu di
+bidang olahraga dan kaderisasi atlet untuk
+pemuda dan pemudi Desa Linggajaya.</p>
+</div>
+</div>
+
+<div class="team-card">
+<img src="desta.jpeg">
+<div class="team-info">
+<h3>Desta R</h3>
+<p>Team Creative EHA Corp, bertugas membantu di
+bidang UMKM dan ekonomi kreatif, serta tim
+creative untuk kebutuhan konten saya.</p>
+</div>
+</div>
+
+<div class="team-card">
+<img src="kosong.jpeg">
+<div class="team-info">
+<h3>Arya Adi</h3>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- VISION & MISSION -->
+<section class="vision-mission">
+    <div class="vm-box">
+        <div class="vm-title">VISION</div>
+        <p class="vm-text">Terwujudnya Masyarakat yang MAJU MANDI (Mandiri, Agamis, Jujur, Unggul, Maju, Aman, Nasionalis, Edukatif, Inovatif).</p>
+        
+        <div class="vm-title">MISSION</div>
+        <div class="mission-list">
+            <p>1. Optimalisasi, pengembangan, dan peningkatan sektor PESSBILKKP (Pemerintahan, Ekonomi, SDM & Sosial Budaya, Infrastruktur & Lingkungan, Keamanan & Ketertiban, Pemberdayaan Masyarakat).</p>
+            <p>2. Peningkatan Produktifitas Sektor Pertanian dan Peternakan serta Perikanan sebagai sumber pendapatan utama masyarakat. </p>
+            <p>3. Pemerataan kualitas pendidikan DTA.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- FILOSOFI VISION -->
+
+<section class="filosofi">
+
+<div class="vm-title">FILOSOFI VISION</div>
+
+<p>
+Selain daripada singkatan, MAJU MANDI mempunyai arti filosofi sebagai berikut
+</p>
+
+<p>
+Selain daripada singkatan, MAJU MANDI mempunyai arti filosofi sebagai berikut
+MAJU secara verbal diartikan sebagai berjalan(bergerak) ke muka; tampil ke
+muka. Secara Adjektiva diartikan cerdas; berkembang pikirannya; berpikir dengan
+baik. Yang dimana MAJU untuk visi ini diartikan bergerak ke depan, berkembang
+menjadi lebih baik, menuju kondisi yang baik/tinggi dalam pembangunan dan
+kesejahteraan .
+</p>
+
+<p>
+MANDI secara verbal diartikan membersihkan tubuh dengan air dan sabun,
+dimana makna MANDI dalam visi ini mengartikan membersihkan tubuh dengan air
+secara merata ke seluruh badan dalam artian (membersihkan diri dari perbuatan
+kotor baik jajaran pemerintahan dan masyarakat) demi terwujudnya lingkungan
+yang bersih, sehat, aman, dan beriman sehingga dapat menerangi sesama
+(Linggajaya Menyala).
+</p>
+
+</section>
+
+
+<!-- PROGRAM PEMERINTAHAN -->
+
+<section class="program-sector">
+
+<div class="sector-title">
+PROGRAM KERJA SEKTOR PEMERINTAHAN
+</div>
+
+<div class="sector-line">
+
+<div class="sector-item">
+<div class="sector-number">01</div>
+<p>
+Pelayanan publik yang berkualitas,
+profesional, transparan, akuntabel,
+serta mengedepankan musyawarah mufakat.
+</p>
+</div>
+
+<div class="line-dot"></div>
+
+<div class="sector-item">
+<div class="sector-number">02</div>
+
+<p>
+Digitalisasi sistem pelayanan berbasis
+teknologi informasi untuk mempercepat
+dan memudahkan pelayanan publik diakses full online.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROGRAM EKONOMI -->
+
+<section class="program-sector">
+
+<div class="sector-title">
+PROGRAM KERJA SEKTOR EKONOMI
+</div>
+
+<div class="sector-line">
+
+<div class="sector-item">
+<div class="sector-number">01</div>
+<p>
+Penguatan BUMDes, Koperasi,
+Pemberdayaan UMKM, Pelatihan Kerja,
+Peningkatan Produktivitas home Industri,
+dan pengembangan ekonomi kreatif.
+</p>
+</div>
+
+<div class="line-dot"></div>
+
+<div class="sector-item">
+<div class="sector-number">02</div>
+<p>
+Peningkatan spesifikasi pengurus,
+membangun central UMKM dan ruang
+terbuka untuk ruang kumpul masyarakat
+dan pelaksanaan event yang
+berkelanjutan.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROGRAM SDM DAN SOSIAL BUDAYA -->
+
+<section class="program-sector">
+
+<div class="program-title">
+PROGRAM KERJA SEKTOR SDM DAN SOSIAL BUDAYA
+</div>
+
+<div class="sector-line">
+
+<div class="sector-item">
+<div class="sector-number">01</div>
+<p>
+Peningkatan pendidikan formal maupun non formal,
+kegiatan keagamaan, pelestarian budaya lokal,
+serta pembinaan karakter masyarakat.
+</p>
+</div>
+
+<div class="line-dot"></div>
+
+<div class="sector-item">
+<div class="sector-number">02</div>
+<p>
+Kaderisasi generasi muda untuk melestarikan
+budaya dengan program Culture Defend yakni
+pembentukan kelompok atau sanggar seni
+dikelola oleh tokoh budaya dan pelaku seni.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROGRAM INFRASTRUKTUR & LINGKUNGAN -->
+
+<section class="program-sector">
+
+<div class="sector-title">
+PROGRAM KERJA SEKTOR INFRASTRUKTUR & LINGKUNGAN
+</div>
+
+<div class="sector-line">
+
+<div class="sector-item">
+<div class="sector-number">01</div>
+<p>
+Pembangunan dan pemeliharaan jalan,
+irigasi, sarana ibadah, serta menciptakan
+lingkungan yang bersih, sehat,
+aman dan nyaman.
+</p>
+</div>
+
+<div class="line-dot"></div>
+
+<div class="sector-item">
+<div class="sector-number">02</div>
+<p>
+Pembentukan Bank Sampah dan 
+pengelolaan sampah terpadu serta
+pemberlakuan aturan penjagaan lingkungan secara penuh dan sanksi bagi pelanggar.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROGRAM KEAMANAN & KETERTIBAN -->
+
+<section class="program-sector">
+
+<div class="sector-title">
+PROGRAM KERJA SEKTOR KEAMANAN & KETERTIBAN
+</div>
+
+<div class="sector-line">
+
+<div class="sector-item">
+<div class="sector-number">01</div>
+<p>
+Peningkatan kegiatan siskamling,
+kerjasama dengan aparat keamanan,
+serta penegakan hukum dan
+ketertiban.
+</p>
+</div>
+
+<div class="line-dot"></div>
+
+<div class="sector-item">
+<div class="sector-number">02</div>
+<p>
+Peningkatan sistem keamanan dibantu
+dengan teknologi digital untuk
+menciptakan kondusifitas di daerah desa
+Linggajaya. Dengan membentuk Comand
+Center.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROGRAM PEMBERDAYAAN MASYARAKAT -->
+
+<section class="program-sector">
+
+<div class="sector-title">
+PROGRAM KERJA SEKTOR<br>
+PEMBERDAYAAN MASYARAKAT
+</div>
+
+<div class="sector-line">
+
+<div class="sector-item">
+<div class="sector-number">01</div>
+<p>
+Melibatkan pemuda, perempuan, dan lembaga desa
+(LPMD, PKK) dalam pembangunan serta menciptakan
+kemandirian desa.
+</p>
+</div>
+
+<div class="line-dot"></div>
+
+<div class="sector-item">
+<div class="sector-number">02</div>
+<p>
+Peningkatan spesifikasi kader PKK dan seluruh
+aspek yang terlibat dalam pembangunan desa.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROGRAM PERTANIAN -->
+
+<section class="program-sector">
+
+<div class="sector-title">
+PROGRAM KERJA SEKTOR PERTANIAN,<br>
+PERIKANAN & PETERNAKAN
+</div>
+
+<div class="sector-line">
+
+<div class="sector-item">
+<div class="sector-number">01</div>
+<p>
+Fokus pada ketahanan pangan mandiri dan
+efesiensi lahan dengan teknologi tepat guna.
+Program ini dinamakan Smart-Agri untuk semua.
+Dengan pemanfaatan Smart Greenhouse &
+Hidroponik Komunal dengan membangun instalasi
+hidroponik dan pemanfaatan lahan Desa.
+</p>
+</div>
+
+<div class="line-dot"></div>
+
+<div class="sector-item">
+<div class="sector-number">02</div>
+<p>
+Program kebun pangan keluarga dengan
+menanam sayuran atau bumbu serta
+apotek hidup di polibag atau rak vertikal.
+Digitalisasi Pemasaran dengan program
+Tani Link dengan pemanfaatan teknologi
+digital.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROGRAM PERIKANAN -->
+
+<section class="program-sector">
+
+<div class="sector-title">
+PROGRAM KERJA SEKTOR PERTANIAN,<br>
+PERIKANAN & PETERNAKAN
+</div>
+
+<div class="sector-line">
+
+<div class="sector-item">
+<div class="sector-number">01</div>
+<p>
+Program untuk sektor Perikanan adalah Akuakultur
+presisi dengan sistem budidaya yang lebih
+terkontrol. Dengan budikdamber budidaya ikan
+dalam ember program yang sangat mudah
+dijalankan oleh semua kalangan dan menghemat
+tempat dan biaya yang cukup ringan.
+</p>
+</div>
+
+<div class="line-dot"></div>
+
+<div class="sector-item">
+<div class="sector-number">02</div>
+<p>
+Budidaya sistem bioflok menerapkan
+teknologi bakteri baik untuk menjaga
+kualitas air.
+Restorasi Ekosistem & wisata pancing
+mengubah area perairan tidak produktif
+menjadi kolam pemancingan edukasi yang
+dikelola BUMDES, atau komunitas.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROGRAM PETERNAKAN -->
+
+<section class="program-sector">
+
+<div class="sector-title">
+PROGRAM KERJA SEKTOR  PERTANIAN, <br>
+PERIKANAN & PETERNAKAN
+</div>
+
+<div class="sector-line">
+
+<div class="sector-item">
+<div class="sector-number">01</div>
+<p>
+Integrasi Hulu-hilir adalah proker untuk sektor
+peternakan yang fokus pada limbah nol/zero waste
+dan kesehatan hewan.
+Bank Pakan Mandiri (silase) : pelatihan pengolahan
+pakan fermentasi agar peternak tidak kesulitan
+mencari rumput saat musim kemarau.
+</p>
+</div>
+
+<div class="line-dot"></div>
+
+<div class="sector-item">
+<div class="sector-number">02</div>
+<p>
+sentra integrasi ternak-pupuk organik, limbah
+ternak tidak dibuang, melainkan diolah menjadi
+pupuk cair atau padat.
+Digital Livestok Monitor adalah penggunaan
+aplikasi sederhana untuk mencatat silsilah,
+jadwal vaksin dan masa kawin ternak untuk
+manajemen ternak yang lebih profesional.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROGRAM KEPEMUDAAN DAN OLAHRAGA -->
+
+<section class="program-sector">
+
+
+<div class="sector-title">
+PROGRAM KERJA SEKTOR KEPEMUDAAN DAN OLAHRAGA
+</div>
+
+<div class="sector-line">
+
+<div class="sector-item">
+<div class="sector-number">01</div>
+
+<p>
+Progker Youth Hub adalah pusat pelatihan
+kepemimpinan, digital skill, dan kewirausahaan
+pemuda untuk karang taruna tingkat desa dan
+dusun.
+Revitalisasi Fasilitas Olahraga; Perbaikan lapangan
+umum agar layak digunakan semua kalangan.
+</p>
+
+
+</div>
+
+
+<div class="line-dot"></div>
+
+<div class="sector-item">
+<div class="sector-number">02</div>
+
+<p>
+Pengadaan event olahraga dan E-sport
+secara berkelanjutan.
+Kaderisasi calon atlet olahraga dan Esport di tingkat Desa.
+Pembentukan Karang Taruna yang di isi
+oleh para pemuda desa.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROGRAM PARIWISATA -->
+
+<section class="program-sector">
+
+<div class="sector-title">
+PROGRAM KERJA SEKTOR PARIWISATA
+</div>
+
+<div class="sector-line">
+
+<div class="sector-item">
+<div class="sector-number">01</div>
+
+<p>
+Rehabilitas Kawasan wisata yang ada, dan didukung
+oleh proker Smart Tourism untuk digitalisasi, untuk
+mengembangkan fasilitas dan manajerial wisata.
+</p>
+
+</div>
+
+
+<div class="line-dot"></div>
+
+<div class="sector-item">
+<div class="sector-number">02</div>
+
+<p>
+merencanakan wisata baru berbasis
+potensi edukasi, Alam, seni dan Budaya
+dengan perencanaan yang matang
+</p>
+
+</div>
+</section>
+<!-- QUOTE -->
+
+<section class="quote">
+
+<p>
+"Dewasa ini, kepemimpinan harus dipegang oleh generasi muda
+untuk mengimbangi pertumbuhan dan perkembangan zaman.
+Selama mereka yang berpikir kolot memimpin,
+maka tidak akan sampai pada suatu kemajuan.
+Maka dari itu waktunya yang muda berkarya."
+</p>
+
+<span>- Colonelblue</span>
+
+</section>
+</body>
+</html>
